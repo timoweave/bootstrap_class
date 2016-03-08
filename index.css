@@ -1,0 +1,59 @@
+body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
+}
+
+.navbar-inverse {
+    background: #303F9F;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background: #1A237E;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background: #1A237E;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a,
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+    background-color: #303F9F;
+    color:#eeeeee;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a:hover {
+    color:#000000;
+}
+
+
+header.jumbotron {
+    background-color: #8080ff;
+    color: white;
+}
+
+footer#contact {
+    background-color : darkgray;
+    padding-top: 1.5em;
+}
+
+#signin_remember_label_id {
+    color:#eeeeee;
+}
+
+#signin_button_id {
+    color:#eeeeee;
+}
+
+.whatever_bg {
+    background : lightgrey;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}

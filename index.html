@@ -15,70 +15,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.css" rel="stylesheet">
-        <!--
-            <link href="css/mystyles.css" rel="stylesheet">
-            -->
-        <style>
-            body{
-            padding:50px 0px 0px 0px;
-            z-index:0;
-            }
-
-            .navbar-inverse {
-            background: #303F9F;
-            }
-
-            .navbar-inverse .navbar-nav > .active > a,
-            .navbar-inverse .navbar-nav > .active > a:hover,
-            .navbar-inverse .navbar-nav > .active > a:focus {
-            color: #fff;
-            background: #1A237E;
-            }
-
-            .navbar-inverse .navbar-nav > .open > a,
-            .navbar-inverse .navbar-nav > .open > a:hover,
-            .navbar-inverse .navbar-nav > .open > a:focus {
-            color: #fff;
-            background: #1A237E;
-            }
-
-            .navbar-inverse .navbar-nav .open .dropdown-menu> li> a,
-            .navbar-inverse .navbar-nav .open .dropdown-menu {
-            background-color: #303F9F;
-            color:#eeeeee;
-            }
-
-            .navbar-inverse .navbar-nav .open .dropdown-menu> li> a:hover {
-            color:#000000;
-            }
-
-
-            header.jumbotron {
-            background-color: #8080ff;
-            color: white;
-            }
-
-            footer#contact {
-            background-color : darkgray;
-            padding-top: 1.5em;
-            }
-
-            #signin_remember_label_id {
-            color:#eeeeee;
-            }
-
-            #signin_button_id {
-            color:#eeeeee;
-            }
-
-            .whatever_bg {
-            background : lightgrey;
-            padding-top: 3em;
-            padding-bottom: 3em;
-            margin-top: 3em;
-            margin-bottom: 3em;
-            }
-        </style>
+        <link href="https://rawgit.com/timoweave/bootstrap_class/master/index.css" rel="stylesheet">
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -462,54 +399,9 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <!-- Include all compiled plugins (below), or include individual files as needed -->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-            <!--
-                <script src="js/myscripts.js"></script>        
-                -->
-            <script>
-                function init() {
 
-                add_nav_click();
-
-                function add_nav_click() {
-                var nav_anchors = $("ul.nav.navbar-nav li a");
-                
-                nav_anchors.on("click", function() {
-                var element = $(this)[0];
-                var tag_id = '#' + element.href.split()[1];
-                var tag_label = element.text;
-                update_bread(tag_id, tag_label);
-
-                clear_nav();
-                
-                $(this).parent().addClass("active");        
-                });
-                }
-
-                function clear_nav() {
-                var active_nav = $(".nav").find(".active");
-                active_nav.removeClass("active");
-                }
-
-                function update_bread(tag, label) {
-
-                var breadcrumb = $('.breadcrumb');
-
-                var anchor = $('<a>');
-                    var list_item = $('<li>').addClass("active").append(anchor);
-
-                        anchor.attr("href", tag);        
-                        anchor.text(label);        
-
-                        if (breadcrumb.children().length > 1) {
-            breadcrumb.children().last().remove();
-            }
-            breadcrumb.append(list_item);
-            }
-            }
-
-            init();
-</script>        
-</div>
+            <script src="https://rawgit.com/timoweave/bootstrap_class/master/index.js" rel="stylesheet">
+        </div>
 
 </body>
 
