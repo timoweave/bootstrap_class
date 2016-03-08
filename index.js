@@ -37,6 +37,7 @@ function init() {
         }
         breadcrumb.append(list_item);
     }
+    console.log("loaded");
 }
 
 init();
