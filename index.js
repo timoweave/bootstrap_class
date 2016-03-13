@@ -45,7 +45,7 @@ function init() {
     }
 }
 
-$(doument).ready(function() {
+$(document).ready(function() {
     init();
 });
 
