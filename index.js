@@ -1,7 +1,8 @@
 function init() {
 
     add_nav_click();
-
+    activate_hints();
+    
     function add_nav_click() {
         var nav_anchors = $("ul.nav.navbar-nav li a");
         
@@ -37,8 +38,18 @@ function init() {
         }
         breadcrumb.append(list_item);
     }
-    console.log("loaded");
+
+    function activate_hints() {
+        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="popover"]').popover();
+    }
 }
 
-init();
+$(doument).ready(function() {
+    init();
+});
+
+
+
+
 
