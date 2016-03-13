@@ -47,6 +47,7 @@ function init() {
 
 $(document).ready(function() {
     init();
+    console.log("loaded");    
 });
 
 
