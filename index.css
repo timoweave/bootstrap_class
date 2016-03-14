@@ -83,3 +83,12 @@ footer#contact {
     left : 0;
     min-height : 300px;
 }
+
+#carousel_buttons {
+    right: "50%";
+    position: absolute;
+    bottom: 0px;
+}
+
+#scroll_spy_menu {
+}

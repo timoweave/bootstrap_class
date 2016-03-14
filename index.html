@@ -16,7 +16,9 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.css" rel="stylesheet">
         <link href="https://rawgit.com/timoweave/bootstrap_class/master/index.css" rel="stylesheet">
-        
+        <!--
+        <link href="index.css" rel="stylesheet">
+        -->
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -101,9 +103,8 @@
                         <li><a href="#contact"><i class="fa fa-envelope-o"></i> Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href=""
-                               data-toggle="modal"
-                               data-target="#login_modal">
+                        <li><a type="button"
+                               class="show_login">
                                 <span class="glyphicon glyphicon-log-in"></span>
                                 Login
                             </a>
@@ -118,10 +119,9 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="btn btn-default close"
-                                data-dimiss="modal"
-                                data-target="#rsvp_modal"
-                                data-toggle="modal">&times;
+                        <button type="button"
+                                class="btn btn-default close hide_rsvp">&times;
+                            <span class="sr-only">Cancel Reserve Table</span>
                         </button>
                         <h4 class="modal-title">Reserve Table
                         </h4>
@@ -220,20 +220,21 @@
                                 <label class="col-sm-3 control-label" for="">
                                 </label>
                                 <div class="input-group col-sm-9">
+
                                     <button class="btn btn-primary"
                                             data-toggle="tooltip"
                                             data-placement="bottom"
                                             title="or Call us at +852-12345678"
                                             type="sumbit">Reserve
                                     </button>
-                                    
-                                    <span style="padding:0.1em;"></span>
 
-                                    <button class="btn btn-default"
-                                            data-dismiss="modal">
+                                    <span style="padding:0.5em;"></span>
+
+                                    <a href=""
+                                       type="button"
+                                       class="btn btn-default rsvp">
                                         Cancel
-                                    </button>
-                                    
+                                    </a>
                                 </div>
                             </div>
                         </form>
@@ -256,10 +257,9 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="btn btn-default close"
-                                data-dimiss="modal"
-                                data-target="#login_modal"
-                                data-toggle="modal">&times;
+                        <button type="button"
+                                class="btn btn-default close hide_login">&times;
+                            <span class="sr-only">Cancel Login</span>
                         </button>
                         <h4 class="modal-title">Login
                         </h4>
@@ -285,7 +285,8 @@
                                 </label>
                             </div>
                             <button id="signin_button_id" type="submit" class="btn btn-info btn-sm">Sign In</button>
-                            <button class="btn btn-default btn-sm" data-dismiss="modal">
+                            <button type="button"
+                                    class="btn btn-default btn-sm hide_login">
                                 Cancel
                             </button>
                         </form>
@@ -318,9 +319,7 @@
                              class="img-responsive center-block">
 
                         <p style="padding:0.5em;"></p>
-                        <button class="btn btn-warning btn-block"
-                                data-toggle="modal"
-                                data-target="#rsvp_modal">
+                        <button class="btn btn-warning btn-block show_rsvp">
                             Reserve Table
                         </button>
                     </div>
@@ -329,7 +328,7 @@
         </header>
 
         <div class="container">
-
+            <!---
             <div class="row row-content">
                 <div class="col-xs-12">
                     <div id="food_carousel"
@@ -398,19 +397,24 @@
                            href="#food_carousel" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right"></span>
                         </a>
+                        <div id="carousel_buttons">
+                            <button id="food_carousel_change" class="btn btn-danger"><span class="glyphicon glyphicon-play"></span></button>
+                            <button id="food_carousel_pause" class="btn btn-danger"><span class="glyphicon glyphicon-pause"></span></button>
+                        </div>
                     </div>
                 </div>
             </div>
+            -->
             
             <div class="row">
                 <div class="col-sm-2 col-sm-push-10 hidden-xs">
                     <nav id="scroll_spy_menu" class="">
                         <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset="40">
                             <li><a href="#head_line">Headline</a></li>
-                            <li><a href="#about_us">About Us</a></li>
-                            <li><a href="#our_history">Our History</a></li>
-                            <li><a href="#corporate_leadership">Corporate Leadership</a></li>
-                            <li><a href="#this_month_promotion">This Month Promotion</a></li>
+                            <li><a href="#about_us">About</a></li>
+                            <li><a href="#our_history">History</a></li>
+                            <li><a href="#corporate_leadership">Corporate</a></li>
+                            <li><a href="#this_month_promotion">Promotion</a></li>
                             <li><a href="#rsvp_kd">RSVP</a></li>
                         </ul>
                     </nav>
@@ -510,6 +514,9 @@
                                 
                             </div>
                         </div>
+                        <div>
+                            <span>&nbsp;</span>
+                        </div>
                     </div>
                     
                     <div class="row whatever_bg sr-only">
@@ -583,8 +590,10 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <!-- Include all compiled plugins (below), or include individual files as needed -->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
             <script src="https://rawgit.com/timoweave/bootstrap_class/master/index.js"></script>
+            <!-- 
+            <script src="index.js"></script>
+            -->
         </div>
 
     </body>

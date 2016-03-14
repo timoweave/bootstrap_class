@@ -2,7 +2,9 @@ function init() {
 
     add_nav_click();
     activate_hints();
-    
+    // add_carousel_buttons();
+    add_modal_clicks();
+
     function add_nav_click() {
         var nav_anchors = $("ul.nav.navbar-nav li a");
         
@@ -43,6 +45,36 @@ function init() {
         $('[data-toggle="tooltip"]').tooltip();
         $('[data-toggle="popover"]').popover();
     }
+
+    function add_carousel_buttons() {
+        var carousel = $("#food_carousel");
+
+        var change = $("#food_carousel_change");
+        change.click(function() {
+            alert("play");
+            carousel.carousel('play');
+        });
+
+        var pause = $("#food_carousel_pause");
+        pause.click(function() {
+            alert("pause");
+            carousel.carousel('pause');
+        });
+    }
+
+    function add_modal_clicks() {
+        set_button_modal_click($('.show_rsvp'), $('#rsvp_modal'), 'show');
+        set_button_modal_click($('.hide_rsvp'), $('#rsvp_modal'), 'hide');
+        set_button_modal_click($('.show_login'), $('#login_modal'), 'show');
+        set_button_modal_click($('.hide_login'), $('#login_modal'), 'hide');
+
+        function set_button_modal_click(button, modal, action) {
+            button.on('click', function() {
+                modal.modal(action);
+            });
+        }
+    }
+
 }
 
 $(document).ready(function() {
